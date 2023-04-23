@@ -12,7 +12,9 @@ namespace RPG_de_dois_personagens
 
         public int idade;
 
-        public string armadura;
+        public int armadura = 100;
+
+        public string nomeArmadura;
 
         public string ia;
 
@@ -20,44 +22,46 @@ namespace RPG_de_dois_personagens
         public void P1AtacarEnergia()
         {
             Console.WriteLine($"O {nome} atacou com energia");
+
+            armadura = (armadura - 22);
         }
 
         public void P1AtacarSoco()
         {
-            Console.WriteLine($"O personagem atacou com um poderoso soco");
+            Console.WriteLine($"O {nome} atacou com um poderoso soco");
         }
         public void P2AtacarCabecada()
         {
-            Console.WriteLine($"O personagem atacou com cabecada");
+            Console.WriteLine($"O {nome} atacou com cabecada");
         }
        
         public void P2AtacarChute()
         {
             Console.WriteLine($"O {nome} atacou com chute");
         }
-        public string P2DefenderEnergia()
+        public void P2DefenderEnergia()
         {
-            return "O personagem defendeu energia!";
+            Console.WriteLine($"O {nome} defendeu energia!");
         }
-        public string P2DefenderSoco()
+        public void P2DefenderSoco()
         {
-            return "O personagem defendeu chute!";
-        }
-
-        public string P1DefenderCabecada()
-        {
-            return "O personagem defendeu a cabecada";
+            Console.WriteLine($"O {nome} defendeu soco!");
+            
         }
 
-        public string P1DefenderChute()
+        public void P1DefenderCabecada()
         {
-            return "O personagem defendeu o ataque chute";
+            Console.WriteLine($"O {nome} defendeu a cabecada");
+        }
+
+        public void P1DefenderChute()
+        {
+            Console.WriteLine($"O {nome} defendeu o ataque chute");
         }
 
         public void RestaurarArmadura()
         {
-            Console.WriteLine($"O personagem restaurou a armadura!");
-            
+            Console.WriteLine($"O {nome} restaurou a armadura!");           
         }
     }
 }
