@@ -12,56 +12,48 @@ namespace RPG_de_dois_personagens
 
         public int idade;
 
-        public int armadura = 100;
+        public int armadura = 200;
 
         public string nomeArmadura;
 
         public string ia;
 
         //Metodos:
-        public void P1AtacarEnergia()
+        public void AtacarEnergia()
         {
             Console.WriteLine($"O {nome} atacou com energia");
-
-            armadura = (armadura - 22);
         }
 
-        public void P1AtacarSoco()
+        public void AtacarSoco()
         {
             Console.WriteLine($"O {nome} atacou com um poderoso soco");
         }
-        public void P2AtacarCabecada()
-        {
-            Console.WriteLine($"O {nome} atacou com cabecada");
-        }
-       
-        public void P2AtacarChute()
-        {
-            Console.WriteLine($"O {nome} atacou com chute");
-        }
-        public void P2DefenderEnergia()
+        public void DefenderEnergia()
         {
             Console.WriteLine($"O {nome} defendeu energia!");
+
+            armadura = (armadura + 40);
         }
-        public void P2DefenderSoco()
+        public void DefenderSoco()
         {
             Console.WriteLine($"O {nome} defendeu soco!");
+
+            armadura = (armadura + 20);
             
         }
-
-        public void P1DefenderCabecada()
-        {
-            Console.WriteLine($"O {nome} defendeu a cabecada");
-        }
-
-        public void P1DefenderChute()
-        {
-            Console.WriteLine($"O {nome} defendeu o ataque chute");
-        }
-
         public void RestaurarArmadura()
         {
-            Console.WriteLine($"O {nome} restaurou a armadura!");           
+            Console.WriteLine($"O {nome} restaurou a armadura!");  
+
+            armadura = (armadura + 15);         
+        }
+
+        public void DanoEnergia(){
+            armadura = (armadura - 40);
+        }
+
+        public void DanoSoco(){
+            armadura = (armadura - 20);
         }
     }
 }
